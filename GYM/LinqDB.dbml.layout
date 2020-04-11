@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 13.75" name="LinqDB">
+  <DataContextMoniker Name="/LinqDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="251b19b7-cdb9-4b3f-9eec-d842f4836840" absoluteBounds="12.25, 6.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LinqDBDataContext/tblCheckIn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="97ff6dbf-a6a4-4df4-87f1-cf0b3d99a936" absoluteBounds="12.265, 6.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f3f22cd9-ad08-48ff-ba33-153685af8518" absoluteBounds="0.75, 10.75, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/LinqDBDataContext/tblUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69727ff6-5923-45c7-8ae1-f6d3d5f04092" absoluteBounds="0.765, 11.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ed8b1e7f-8018-4f79-9b71-f09da574a434" absoluteBounds="0.75, 6.375, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/LinqDBDataContext/tblCustomer" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63e0a45c-8e34-495f-a2a1-e4fdc21beb67" absoluteBounds="0.765, 6.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6a2bc686-f40a-46e3-9968-a542778c4003" absoluteBounds="6.5, 5.75, 2, 4.2708154296874987">
+      <DataClassMoniker Name="/LinqDBDataContext/tblCustomerPlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82d4f9e2-9286-4f01-acc5-53bdadf24bcb" absoluteBounds="6.515, 6.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a4097269-9e97-42da-9e84-96e31e312a9d" absoluteBounds="3.5, 6.625, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LinqDBDataContext/tblMeasurement" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7469b57-e7a0-4788-bb9e-56d74b4fd845" absoluteBounds="3.515, 7.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b1803c49-c50e-4c5b-af92-e5fbfa91b044" absoluteBounds="9.25, 6.625, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/LinqDBDataContext/tblPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f8ff59c-848a-4576-8247-47f8ced71e0b" absoluteBounds="9.265, 7.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc228373-0569-486e-8179-01c990819c2f" absoluteBounds="3.75, 0.75, 2, 4.2708154296875">
+      <DataClassMoniker Name="/LinqDBDataContext/tblPlan" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f6a9efc2-8834-41b5-adef-ddb990084ea6" absoluteBounds="3.765, 1.21, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f2596555-f063-4d01-828e-1bf7b3b57fa3" absoluteBounds="1, 3.875, 2, 1.1939925130208331">
+      <DataClassMoniker Name="/LinqDBDataContext/tblPlanType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="93a294ed-3e37-47ae-852a-f42f19d53c44" absoluteBounds="1.0150000000000001, 4.335, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="69b27c78-2fb2-4f13-8f57-f9fa54b509d2" absoluteBounds="9.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/LinqDBDataContext/tblStatus" />
+      <nestedChildShapes>
+        <elementListCompartment Id="25cc2739-0d26-49b5-b39a-6653f3e781af" absoluteBounds="9.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d1541e44-b8fd-49b6-ab74-a950103ee5be" absoluteBounds="3.75, 11.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/LinqDBDataContext/tblStock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea263bb7-a7ef-4f2b-9df8-a1c13308c264" absoluteBounds="3.765, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 6.53125); (12.25 : 6.53125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblCustomerPlan/tblCustomerPlan_tblCheckIn" />
+      <nodes>
+        <classShapeMoniker Id="6a2bc686-f40a-46e3-9968-a542778c4003" />
+        <classShapeMoniker Id="251b19b7-cdb9-4b3f-9eec-d842f4836840" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.46875); (5.57291666666667 : 6.46875 : JumpStart); (5.73958333333333 : 6.46875 : JumpEnd); (6.5 : 6.46875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblCustomer/tblCustomer_tblCustomerPlan" />
+      <nodes>
+        <classShapeMoniker Id="ed8b1e7f-8018-4f79-9b71-f09da574a434" />
+        <classShapeMoniker Id="6a2bc686-f40a-46e3-9968-a542778c4003" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.89505126953125); (3.5 : 7.89505126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblCustomer/tblCustomer_tblMeasurement" />
+      <nodes>
+        <classShapeMoniker Id="ed8b1e7f-8018-4f79-9b71-f09da574a434" />
+        <classShapeMoniker Id="a4097269-9e97-42da-9e84-96e31e312a9d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 7.89505126953125); (9.25 : 7.89505126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblCustomerPlan/tblCustomerPlan_tblPayment" />
+      <nodes>
+        <classShapeMoniker Id="6a2bc686-f40a-46e3-9968-a542778c4003" />
+        <classShapeMoniker Id="b1803c49-c50e-4c5b-af92-e5fbfa91b044" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.65625 : 5.0208154296875); (5.65625 : 9.624208984375); (6.5 : 9.624208984375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblPlan/tblPlan_tblCustomerPlan" />
+      <nodes>
+        <classShapeMoniker Id="bc228373-0569-486e-8179-01c990819c2f" />
+        <classShapeMoniker Id="6a2bc686-f40a-46e3-9968-a542778c4003" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3 : 4.44790771484375); (3.75 : 4.44790771484375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblPlanType/tblPlanType_tblPlan" />
+      <nodes>
+        <classShapeMoniker Id="f2596555-f063-4d01-828e-1bf7b3b57fa3" />
+        <classShapeMoniker Id="bc228373-0569-486e-8179-01c990819c2f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.40625 : 5.6362939453125); (11.40625 : 6.515625); (12.25 : 6.515625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqDBDataContext/tblStatus/tblStatus_tblCheckIn" />
+      <nodes>
+        <classShapeMoniker Id="69b27c78-2fb2-4f13-8f57-f9fa54b509d2" />
+        <classShapeMoniker Id="251b19b7-cdb9-4b3f-9eec-d842f4836840" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

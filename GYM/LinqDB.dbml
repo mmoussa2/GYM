@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GYM" Class="LinqDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=MAJID-PC;Initial Catalog=GYM;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GYMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblCheckIn" Member="tblCheckIns">
+    <Type Name="tblCheckIn">
+      <Column Name="CheckInID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerPlanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="StatusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CheckInDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="MemberTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tblCustomerPlan_tblCheckIn" Member="tblCustomerPlan" ThisKey="CustomerPlanID" OtherKey="CustomerPlanID" Type="tblCustomerPlan" IsForeignKey="true" />
+      <Association Name="tblStatus_tblCheckIn" Member="tblStatus" ThisKey="StatusID" OtherKey="StatusID" Type="tblStatus" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblUser" Member="tblUsers">
+    <Type Name="tblUser">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Salary" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCustomer" Member="tblCustomers">
+    <Type Name="tblCustomer">
+      <Column Name="CustomerID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BarCode" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tblCustomer_tblCustomerPlan" Member="tblCustomerPlans" ThisKey="CustomerID" OtherKey="CustomerID" Type="tblCustomerPlan" />
+      <Association Name="tblCustomer_tblMeasurement" Member="tblMeasurements" ThisKey="CustomerID" OtherKey="CustomerID" Type="tblMeasurement" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCustomerPlan" Member="tblCustomerPlans">
+    <Type Name="tblCustomerPlan">
+      <Column Name="CustomerPlanID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PlanID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalFees" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PaymentAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.TimeSpan" DbType="Time NOT NULL" CanBeNull="false" />
+      <Column Name="HasLimitedHours" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FromHour" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ToHour" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Mon" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Tue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Wed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Thu" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Fri" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Sat" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Sun" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tblCustomerPlan_tblCheckIn" Member="tblCheckIns" ThisKey="CustomerPlanID" OtherKey="CustomerPlanID" Type="tblCheckIn" />
+      <Association Name="tblCustomerPlan_tblPayment" Member="tblPayments" ThisKey="CustomerPlanID" OtherKey="CustomerPlanID" Type="tblPayment" />
+      <Association Name="tblCustomer_tblCustomerPlan" Member="tblCustomer" ThisKey="CustomerID" OtherKey="CustomerID" Type="tblCustomer" IsForeignKey="true" />
+      <Association Name="tblPlan_tblCustomerPlan" Member="tblPlan" ThisKey="PlanID" OtherKey="PlanID" Type="tblPlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblMeasurement" Member="tblMeasurements">
+    <Type Name="tblMeasurement">
+      <Column Name="MeasurementID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Height" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Chest" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Neck" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Hip" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="[Body Fat]" Member="Body_Fat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="MeasurementDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tblCustomer_tblMeasurement" Member="tblCustomer" ThisKey="CustomerID" OtherKey="CustomerID" Type="tblCustomer" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPayment" Member="tblPayments">
+    <Type Name="tblPayment">
+      <Column Name="PaymentID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerPlanID" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PaymentDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="tblCustomerPlan_tblPayment" Member="tblCustomerPlan" ThisKey="CustomerPlanID" OtherKey="CustomerPlanID" Type="tblCustomerPlan" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPlan" Member="tblPlans">
+    <Type Name="tblPlan">
+      <Column Name="PlanID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PlanName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ContractLenght" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TotalFees" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PaymentDayAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PaymentMonthAmount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HasLimitedHours" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FromHour" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="ToHour" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="Mon" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Tue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Wed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Thu" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Fri" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sat" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Sun" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="tblPlan_tblCustomerPlan" Member="tblCustomerPlans" ThisKey="PlanID" OtherKey="PlanID" Type="tblCustomerPlan" />
+      <Association Name="tblPlanType_tblPlan" Member="tblPlanType" ThisKey="PlanTypeID" OtherKey="PlanTypeID" Type="tblPlanType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblPlanType" Member="tblPlanTypes">
+    <Type Name="tblPlanType">
+      <Column Name="PlanTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PlanTypeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblPlanType_tblPlan" Member="tblPlans" ThisKey="PlanTypeID" OtherKey="PlanTypeID" Type="tblPlan" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStatus" Member="tblStatus">
+    <Type Name="tblStatus">
+      <Column Name="StatusID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StatusCode" Type="System.String" DbType="Char(3) NOT NULL" CanBeNull="false" />
+      <Column Name="StatusName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tblStatus_tblCheckIn" Member="tblCheckIns" ThisKey="StatusID" OtherKey="StatusID" Type="tblCheckIn" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblStock" Member="tblStocks">
+    <Type Name="tblStock">
+      <Column Name="StockID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Item" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NetAmount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

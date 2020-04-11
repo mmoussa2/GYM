@@ -1,0 +1,10 @@
+C:\Users\Majid\Desktop\GYM\GYM\bin\GYM.dll
+C:\Users\Majid\Desktop\GYM\GYM\bin\GYM.pdb
+C:\Users\Majid\Desktop\GYM\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+C:\Users\Majid\Desktop\GYM\GYM\obj\Debug\GYM.dll
+C:\Users\Majid\Desktop\GYM\GYM\obj\Debug\GYM.pdb
+D:\GYM\GYM\bin\GYM.dll
+D:\GYM\GYM\bin\GYM.pdb
+D:\GYM\GYM\obj\Debug\GYM.csprojResolveAssemblyReference.cache
+D:\GYM\GYM\obj\Debug\GYM.dll
+D:\GYM\GYM\obj\Debug\GYM.pdb
